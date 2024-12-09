@@ -1,15 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="">
   <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>勝率計算器</title>
+    <meta name="description" content="簡單的遊戲勝率計算器，輸入您想要的勝率，就會告訴您需要再連續贏幾場。">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
   <body>
     <div id="app">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde fuga necessitatibus odio voluptates qui sit libero, quia saepe earum incidunt illo, deserunt odit ex voluptate quidem obcaecati cumque beatae ratione.
+      <div class="content">
+        <h1><i class="fa fa-trophy" aria-hidden="true"></i>勝率計算器</h1>
+        <div class="card">
+          <div class="form-group">
+            <label for="all">總場次：</label>
+            <input id="all" type="number" v-model="all">
+          </div>
+          <div class="form-group">
+            <label for="win">目前勝率：</label>
+            <input id="win" type="number" v-model="win">%
+          </div>
+          <span>目前勝場約 {{ totalWinDisplay }} 場
+          </span>
+          <hr>
+          <div class="form-group">
+            <label for="wish">想要的勝率：</label>
+            <input id="wish" type="number" v-model="wish">%
+          </div>
+          <span>需要再連續贏 {{ more }} 場</span>
+        </div>
+      </div>
     </div>
-    <script type="module" src="/src/main.js"></script>
+    
+    <script type="module" src="/src/js/index.js"></script>
   </body>
 </html>
