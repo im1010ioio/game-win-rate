@@ -57,7 +57,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 380px;
+  min-height: 450px;
   color: #FBF0DE;
   font-family: "Noto Sans",		// Noto Sans
 				       "Noto Sans TC",	// 思源體
@@ -74,6 +74,12 @@ body{
 h1{
   text-align: center;
   letter-spacing: 20px;
+  margin: 0;
+}
+
+p{
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 input{
