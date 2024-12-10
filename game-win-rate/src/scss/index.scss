@@ -43,6 +43,10 @@ $border-color: #9B8052;
   @include box-sizing();
 }
 
+[v-clock]{
+  display: none;
+}
+
 html, body{
   height: 100%;
   color: #FBF0DE;
