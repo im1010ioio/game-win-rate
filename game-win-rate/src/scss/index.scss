@@ -2,121 +2,135 @@
 $text-color: #FBF0DE;
 $border-color: #9B8052;
 
-@mixin box-sizing($box: border-box) {
-    -webkit-box-sizing: $box;
-       -moz-box-sizing: $box;
-            box-sizing: $box;
-}
-
 // Mixins
-@mixin vertical-gradient( $start-color: #202527,
-						              $start-point: 0%,
-						              $end-color:   #1b1015,
-						              $end-point:   100%     ) {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#202527+0,1b1015+100 */
-	background: $start-color; /* Old browsers */
-	background: -moz-linear-gradient(top, $start-color $start-point, $end-color $end-point); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, $start-color $start-point, $end-color $end-point); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, $start-color $start-point, $end-color $end-point); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=0 ); /* IE6-9 */
+@mixin box-sizing($box: border-box) {
+    box-sizing: $box;
 }
 
-@mixin horizontal-gradient( $start-color: #5a4a2f,
-						  $start-point:  0%,
-						  $end-color: #1b1015,
-						  $end-point:  100%) {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5a4a2f+0,1b1015+100 */
-	background: $start-color; /* Old browsers */
-	background: -moz-linear-gradient(left, $start-color $start-point, $end-color $end-point); /* FF3.6-15 */
-	background: -webkit-linear-gradient(left, $start-color $start-point, $end-color $end-point); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, $start-color $start-point, $end-color $end-point); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start-color', endColorstr='$end-color',GradientType=1 ); /* IE6-9 */
+@mixin vertical-gradient(
+    $start-color: #202527,
+    $start-point: 0%,
+    $end-color: #1b1015,
+    $end-point: 100%
+) {
+    background: linear-gradient(to bottom, $start-color $start-point, $end-color $end-point);
 }
 
-@mixin box-shadow($x-offset: 0px, $y-offset: 2px, $blur: 10px, $shadow-color: rgba(189, 161, 119, .2)){
-    -webkit-box-shadow: $x-offset $y-offset $blur $shadow-color;
-       -moz-box-shadow: $x-offset $y-offset $blur $shadow-color;
-            box-shadow: $x-offset $y-offset $blur $shadow-color;
+@mixin horizontal-gradient(
+    $start-color: #5a4a2f,
+    $start-point: 0%,
+    $end-color: #1b1015,
+    $end-point: 100%
+) {
+    background: linear-gradient(to right, $start-color $start-point, $end-color $end-point);
 }
 
-*{
-  @include box-sizing();
+@mixin box-shadow(
+    $x-offset: 0px,
+    $y-offset: 2px,
+    $blur: 10px,
+    $shadow-color: rgba(189, 161, 119, .2)
+) {
+    box-shadow: $x-offset $y-offset $blur $shadow-color;
 }
 
-[v-clock]{
-  display: none;
+// Global Styles
+* {
+    @include box-sizing();
 }
 
-html, body{
-  height: 100%;
-  color: #FBF0DE;
-  @include vertical-gradient();
+[v-clock] {
+    display: none;
 }
 
-body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 450px;
-  color: #FBF0DE;
-  font-family: "Noto Sans",		// Noto Sans
-				       "Noto Sans TC",	// 思源體
-		    	     "Helvetica Neue", 
-	             "Microsoft JHengHei UI",
-             	 "Microsoft JHengHei",
-	             "微軟正黑體",
-		           sans-serif;
-  text-shadow: 0px 0px 5px #BDA177;
-  line-height: 1.5;
-  letter-spacing: 1px;
+html, body {
+    height: 100%;
+    color: $text-color;
+    @include vertical-gradient();
 }
 
-h1{
-  text-align: center;
-  letter-spacing: 20px;
-  margin: 0;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 550px;
+    font-family: "Noto Sans", "Noto Sans TC", "Helvetica Neue", 
+                 "Microsoft JHengHei UI", "Microsoft JHengHei", 
+                 "微軟正黑體", sans-serif;
+    text-shadow: 0px 0px 5px #BDA177;
+    line-height: 1.5;
+    letter-spacing: 1px;
 }
 
-p{
-  text-align: center;
-  margin-bottom: 2rem;
+h1 {
+    text-align: center;
+    letter-spacing: 20px;
+    margin: 0;
 }
 
-input{
-  font-size: 16px;
-  background: none;
-  color: $text-color;
-  border: none;
-  border-bottom: 1px solid $border-color;
-  border-radius: 0;
-  width: 100px;
-  &, &:hover, &:focus{
-    outline: none;
-  }
+p {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-hr{
-  border-color: $border-color;
+input {
+    font-size: 16px;
+    background: none;
+    color: $text-color;
+    border: none;
+    border-bottom: 1px solid $border-color;
+    border-radius: 0;
+    width: 100px;
+    &, &:hover, &:focus {
+        outline: none;
+    }
 }
 
-.content{
-  position: relative;
-  top: -30px;
+hr {
+    border-color: $border-color;
 }
 
-.card{
-  padding: 30px;
-  width: 100%;
-  max-width: 500px;
-  border: 1px solid $border-color;
-  @include box-shadow();
-  @include horizontal-gradient();
-  label{
-    display: inline-block;
-    width: 120px;
-  }
+
+.card {
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid $border-color;
+    @include box-shadow();
+    @include horizontal-gradient();
+    label {
+        display: inline-block;
+        width: 120px;
+    }
 }
 
-.form-group{
-  margin-bottom: 10px;
+.form-group {
+    margin-bottom: 10px;
+}
+
+.eDynhg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 40px;
+    padding: 8px 16px;
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    color: white;
+    text-decoration: none !important;
+    background-color:#AD5138;
+    color:#F8E0BE;
+    border:none;
+}
+
+.eDynhg:hover {
+    text-decoration: none !important;
+}
+
+blockquote {
+    text-align: center;
+    margin: 0;
+    margin-top: 3rem;
 }
