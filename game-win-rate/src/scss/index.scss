@@ -95,7 +95,7 @@ hr {
 .card {
     padding: 30px;
     width: 100%;
-    max-width: 500px;
+    max-width: 380px;
     border: 1px solid $border-color;
     @include box-shadow();
     @include horizontal-gradient();
@@ -133,4 +133,16 @@ blockquote {
     text-align: center;
     margin: 0;
     margin-top: 4rem;
+}
+
+.content.-en{
+    h1{
+        letter-spacing: 2px;
+        i{
+            margin-right: 12px;
+        }
+    }
+    .card label{
+        width: 160px;
+    }
 }

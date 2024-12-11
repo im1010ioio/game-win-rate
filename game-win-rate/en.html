@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Win Rate Calculator</title>
+    <meta name="description" content="簡單的遊戲勝率計算器，輸入您想要的勝率，就會告訴您需要再連續贏幾場，適用於傳說對決、英雄聯盟 LOL 激鬥峽谷等。">
+
+    <!-- og -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content='勝率計算器'>
+    <meta property="og:url" content='https://gamewinrate.cc/'>
+    <meta property="og:title" content='勝率計算器'>
+    <meta property="og:description" content='簡單的遊戲勝率計算器，輸入您想要的勝率，就會告訴您需要再連續贏幾場，適用於傳說對決、英雄聯盟 LOL 激鬥峽谷等。'>
+    <meta property="og:image" content='https://gamewinrate.cc/images/og-image.png'>
+    <meta property="og:image:alt" content='勝率計算器'>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3P8TZWK8EB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3P8TZWK8EB');
+    </script>
+
+    <!-- Google Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5882144744458562" crossorigin="anonymous"></script>
+    
+    <!-- Google structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "勝率計算器",
+        "operatingSystem": ["Windows 10", "macOS 11"],
+        "applicationCategory": "GameApplication",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4,
+          "ratingCount": 4
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "TWD"
+        }
+      }
+    </script>
+      
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- style -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css">
+
+  </head>
+  <body>
+    <div id="app" class="content -en">
+      <h1><i class="fa fa-trophy" aria-hidden="true"></i>Win Rate Calculator</h1>
+      <p>Enter your desired win rate,<br> and it will tell you how many<br> consecutive wins you need.</p>
+      <div class="card">
+        <div class="form-group">
+          <label for="all">Total Games:</label>
+          <input id="all" type="number" v-model="all">
+        </div>
+        <div class="form-group">
+          <label for="win">Current Win Rate:</label>
+          <input id="win" type="number" v-model="win">%
+        </div>
+        <span>Current Wins: approximately {{ totalWinDisplay }} games
+        </span>
+        <hr>
+        <div class="form-group">
+          <label for="wish">Desired Win Rate:</label>
+          <input id="wish" type="number" v-model="wish">%
+        </div>
+        <span>Consecutive Wins Needed: {{ more }} games</span>
+      </div>
+    </div>
+    <blockquote>
+      <a href="https://im1010ioio.bobaboba.me" target="_blank" class="sc-1ykasxb-0 eDynhg">
+        <img height="100%" src="https://s3.ap-southeast-1.amazonaws.com/media.anyonelab.com/images/boba/boba-embed-icon.png" alt="boba-icon"/>
+        <div>Buy me a bubble tea!</div>
+      </a>
+    </blockquote>
+
+    <script type="module" src="/src/js/index.js"></script>
+  </body>
+</html>
