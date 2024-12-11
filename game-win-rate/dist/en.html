@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="zh-Hant-TW">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="./favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>勝率計算器</title>
-    <meta name="description" content="簡單的遊戲勝率計算器，輸入您想要的勝率，就會告訴您需要再連續贏幾場，適用於傳說對決、英雄聯盟 LOL 激鬥峽谷等。">
+    <title>Win Rate Calculator</title>
+    <meta name="description" content="A simple game win rate calculator. Enter your desired win rate, and it will calculate how many consecutive wins you need. Perfect for games like League of Legends, Wild Rift, and Arena of Valor.">
 
     <!-- og -->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content='勝率計算器'>
+    <meta property="og:site_name" content='Win Rate Calculator'>
     <meta property="og:url" content='https://gamewinrate.cc/'>
-    <meta property="og:title" content='勝率計算器'>
-    <meta property="og:description" content='簡單的遊戲勝率計算器，輸入您想要的勝率，就會告訴您需要再連續贏幾場，適用於傳說對決、英雄聯盟 LOL 激鬥峽谷等。'>
+    <meta property="og:title" content='Win Rate Calculator'>
+    <meta property="og:description" content='A simple game win rate calculator. Enter your desired win rate, and it will calculate how many consecutive wins you need. Perfect for games like League of Legends, Wild Rift, and Arena of Valor.'>
     <meta property="og:image" content='https://gamewinrate.cc/images/og-image.png'>
-    <meta property="og:image:alt" content='勝率計算器'>
+    <meta property="og:image:alt" content='Win Rate Calculator'>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3P8TZWK8EB"></script>
@@ -34,7 +34,7 @@
       {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "勝率計算器",
+        "name": "Win Rate Calculator",
         "operatingSystem": ["Windows 10", "macOS 11"],
         "applicationCategory": "GameApplication",
         "aggregateRating": {
@@ -63,32 +63,32 @@
     <link rel="stylesheet" crossorigin href="./assets/index-BMUb2VsC.css">
   </head>
   <body>
-    <div id="app" class="content">
-      <h1><i class="fa fa-trophy" aria-hidden="true"></i>勝率計算器</h1>
-      <p>輸入您想要的勝率，<br>就會告訴您需要再連續贏幾場。</p>
+    <div id="app" class="content -en">
+      <h1><i class="fa fa-trophy" aria-hidden="true"></i>Win Rate Calculator</h1>
+      <p>Enter your desired win rate,<br> and it will tell you how many<br> consecutive wins you need.</p>
       <div class="card">
         <div class="form-group">
-          <label for="all">總場次：</label>
+          <label for="all">Total Games:</label>
           <input id="all" type="number" v-model="all">
         </div>
         <div class="form-group">
-          <label for="win">目前勝率：</label>
+          <label for="win">Current Win Rate:</label>
           <input id="win" type="number" v-model="win">%
         </div>
-        <span>目前勝場約 {{ totalWinDisplay }} 場
+        <span>Current Wins: approximately {{ totalWinDisplay }} games
         </span>
         <hr>
         <div class="form-group">
-          <label for="wish">想要的勝率：</label>
+          <label for="wish">Desired Win Rate:</label>
           <input id="wish" type="number" v-model="wish">%
         </div>
-        <span>需要再連續贏 {{ more }} 場</span>
+        <span>Consecutive Wins Needed: {{ more }} games</span>
       </div>
     </div>
     <blockquote>
       <a href="https://im1010ioio.bobaboba.me" target="_blank" class="sc-1ykasxb-0 eDynhg">
         <img height="100%" src="https://s3.ap-southeast-1.amazonaws.com/media.anyonelab.com/images/boba/boba-embed-icon.png" alt="boba-icon"/>
-        <div>請我喝杯珍奶！</div>
+        <div>Buy me a bubble tea!</div>
       </a>
     </blockquote>
 
