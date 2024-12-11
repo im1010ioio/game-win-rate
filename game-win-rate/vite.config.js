@@ -36,6 +36,9 @@ export default defineConfig({
       input: {
         main: fileURLToPath(new URL('./index.html', import.meta.url)),
         en: fileURLToPath(new URL('./en.html', import.meta.url)),
+        jp: fileURLToPath(new URL('./jp.html', import.meta.url)),
+        cn: fileURLToPath(new URL('./cn.html', import.meta.url)),
+        ko: fileURLToPath(new URL('./ko.html', import.meta.url)),
       },
     },
   },
@@ -44,6 +47,15 @@ export default defineConfig({
       server.middlewares.use((req, res, next) => {
         if (req.url === '/en/') {
           req.url = '/en.html';
+        }
+        else if (req.url === '/jp/') {
+          req.url = '/jp.html';
+        }
+        else if (req.url === '/cn/') {
+          req.url = '/cn.html';
+        }
+        else if (req.url === '/ko/') {
+          req.url = '/ko.html';
         }
         next();
       });

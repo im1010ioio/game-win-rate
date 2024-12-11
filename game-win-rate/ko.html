@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Win Rate Calculator</title>
-    <meta name="description" content="A simple game win rate calculator. Enter your desired win rate, and it will calculate how many consecutive wins you need. Perfect for games like Arena of Valor, League of Legends, and Wild Rift.">
+    <title>승률 계산기</title>
+    <meta name="description" content="간단한 게임 승률 계산기입니다. 원하는 승률을 입력하면, 추가로 연승해야 할 횟수를 계산해줍니다. 전설의 대결, 리그 오브 레전드(LOL), 와일드 리프트 등 게임에 적용 가능합니다.">
 
     <!-- og -->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content='Win Rate Calculator'>
+    <meta property="og:site_name" content='승률 계산기'>
     <meta property="og:url" content='https://gamewinrate.cc/'>
-    <meta property="og:title" content='Win Rate Calculator'>
-    <meta property="og:description" content='A simple game win rate calculator. Enter your desired win rate, and it will calculate how many consecutive wins you need. Perfect for games like Arena of Valor, League of Legends, and Wild Rift.'>
+    <meta property="og:title" content='승률 계산기'>
+    <meta property="og:description" content='간단한 게임 승률 계산기입니다. 원하는 승률을 입력하면, 추가로 연승해야 할 횟수를 계산해줍니다. 전설의 대결, 리그 오브 레전드(LOL), 와일드 리프트 등 게임에 적용 가능합니다.'>
     <meta property="og:image" content='https://gamewinrate.cc/images/og-image.png'>
-    <meta property="og:image:alt" content='Win Rate Calculator'>
+    <meta property="og:image:alt" content='승률 계산기'>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3P8TZWK8EB"></script>
@@ -34,7 +34,7 @@
       {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "Win Rate Calculator",
+        "name": "승률 계산기",
         "operatingSystem": ["Windows 10", "macOS 11"],
         "applicationCategory": "GameApplication",
         "aggregateRating": {
@@ -61,32 +61,32 @@
 
   </head>
   <body>
-    <div id="app" class="content -en">
-      <h1><i class="fa fa-trophy" aria-hidden="true"></i>Win Rate Calculator</h1>
-      <p>Enter your desired win rate,<br> and it will tell you how many<br> consecutive wins you need.</p>
+    <div id="app" class="content">
+      <h1><i class="fa fa-trophy" aria-hidden="true"></i>승률 계산기</h1>
+      <p>원하는 승률을 입력하면,<br> 추가로 연승해야 할 횟수를 알려줍니다.</p>
       <div class="card">
         <div class="form-group">
-          <label for="all">Total Games:</label>
+          <label for="all">총 경기 수:</label>
           <input id="all" type="number" v-model="all">
         </div>
         <div class="form-group">
-          <label for="win">Current Win Rate:</label>
+          <label for="win">현재 승률:</label>
           <input id="win" type="number" v-model="win">%
         </div>
-        <span>Current Wins: approximately {{ totalWinDisplay }} games
+        <span>현재 승리 횟수(약): {{ totalWinDisplay }} 경기
         </span>
         <hr>
         <div class="form-group">
-          <label for="wish">Desired Win Rate:</label>
+          <label for="wish">원하는 승률:</label>
           <input id="wish" type="number" v-model="wish">%
         </div>
-        <span>Consecutive Wins Needed: {{ more }} games</span>
+        <span>추가로 연승해야 할 횟수: {{ more }} 경기</span>
       </div>
     </div>
     <blockquote>
       <a href="https://im1010ioio.bobaboba.me" target="_blank" class="sc-1ykasxb-0 eDynhg">
         <img height="100%" src="https://s3.ap-southeast-1.amazonaws.com/media.anyonelab.com/images/boba/boba-embed-icon.png" alt="boba-icon"/>
-        <div>Buy me a bubble tea!</div>
+        <div>저에게 버블티 한 잔 사주세요!</div>
       </a>
     </blockquote>
 
