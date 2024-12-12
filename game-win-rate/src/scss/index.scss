@@ -146,3 +146,113 @@ blockquote {
         width: 160px;
     }
 }
+
+// Language Buttons
+#lan-menu-toggle{
+    display: none;
+}
+
+#app{
+    position: relative;
+}
+
+.lan-btn-group {
+    font-size: 1.25rem;
+    z-index: 1002;
+    text-align: center;
+    height: fit-content;
+    
+    &, .lan-menu, label[for="lan-menu-toggle"] {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        width: 150px;
+        margin: auto;
+        cursor: pointer;
+    }
+    
+    label, button, a {
+        display: block;
+        padding: .2rem 1.5em;
+        font-size: .8em;
+        font-weight: 500;
+        line-height: 1.8;
+    }
+
+    a, a:active{
+        color: $text-color;
+    }
+    
+    button, a {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        
+        &:not(:last-child) {
+            border-bottom: 2px solid rgba(0,0,0, .2);
+        }
+    }
+}
+
+.lan-menu, label[for="lan-menu-toggle"] {
+    border-radius: .5em;
+    transition: .3s;
+}
+
+.lan-menu {
+    z-index: 2;
+    background-color: rgb(35 28 24 / 60%);
+    backdrop-filter: blur(10px);
+    padding-top: calc(2em + 6px);
+    border: 5px solid rgba(0,0,0, .2);
+    opacity: 0;
+    pointer-events: none;
+}
+
+label[for="lan-menu-toggle"] {
+    z-index: 3;
+    display: inline-block;
+    background-color: rgba(255,255,255, .07);
+    border: 5px solid rgba(0,0,0, .07);
+}
+
+#lan-menu-toggle:checked {
+    & ~ label[for="lan-menu-toggle"] {
+        background-color: rgba(0,0,0, 0.05);
+        border-color: rgba(0,0,0, .05);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    
+    & ~ .lan-menu {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+
+// Media Queries
+@media screen and (orientation: portrait) {
+    .scene {
+        display: none;
+    }
+    
+    main {
+        --width: auto;
+        flex-grow: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .scene, aside {
+        display: none;
+    }
+    
+    main {
+        --width: auto;
+        overflow: visible;
+        min-height: fit-content;
+        max-height: fit-content;
+    }
+}

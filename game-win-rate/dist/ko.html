@@ -59,8 +59,8 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css">
 
-    <script type="module" crossorigin src="./assets/index-tyI74svm.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BMUb2VsC.css">
+    <script type="module" crossorigin src="./assets/index-CoieY1kJ.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BPqSCrCg.css">
   </head>
   <body>
     <div id="app" class="content">
@@ -84,6 +84,16 @@
         </div>
         <span>추가로 연승해야 할 횟수: {{ more }} 경기</span>
       </div>
+      <div id="lan-content" class="lan-btn-group">
+          <input type="checkbox" id="lan-menu-toggle">
+          <div id="language-options" class="lan-menu">
+            <a href="/en">English</a>
+            <a href="/">繁體中文</a>
+            <a href="/cn">简体中文</a>
+            <a href="/jp">日本語</a>
+          </div>
+          <label for="lan-menu-toggle" id="current-language">한국어</label>
+      </div>
     </div>
     <blockquote>
       <a href="https://im1010ioio.bobaboba.me" target="_blank" class="sc-1ykasxb-0 eDynhg">
@@ -91,6 +101,11 @@
         <div>저에게 버블티 한 잔 사주세요!</div>
       </a>
     </blockquote>
+    <div id="lan-content" class="lan-btn-group">
+        <input type="checkbox" id="lan-menu-toggle" class="d-none">
+        <div id="language-options" class="lan-menu"></div>
+        <label for="lan-menu-toggle" id="current-language"></label>
+    </div>
 
   </body>
 </html>
