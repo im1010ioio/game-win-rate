@@ -54,7 +54,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 550px;
+    min-height: 800px;
     font-family: "Noto Sans", "Noto Sans TC", "Helvetica Neue", 
                  "Microsoft JHengHei UI", "Microsoft JHengHei", 
                  "微軟正黑體", sans-serif;
@@ -114,7 +114,6 @@ hr {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    height: 40px;
     padding: 8px 16px;
     backdrop-filter: blur(20px);
     border-radius: 12px;
@@ -136,6 +135,7 @@ blockquote {
 }
 
 .content.-en{
+    font-size: .9rem;
     h1{
         letter-spacing: 2px;
         i{
@@ -143,7 +143,7 @@ blockquote {
         }
     }
     .card label{
-        width: 160px;
+        width: 140px;
     }
 }
 
