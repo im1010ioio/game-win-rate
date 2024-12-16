@@ -268,6 +268,10 @@ label[for="lan-menu-toggle"] {
     }
 }
 
+.desc, footer{
+    opacity: .8;
+}
+
 footer{
     position: absolute;
     left: 0;
@@ -277,5 +281,4 @@ footer{
     padding: 1rem;
     font-size: .8rem;
     line-height: 2;
-    opacity: .8;
 }
