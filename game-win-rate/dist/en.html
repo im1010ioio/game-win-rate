@@ -67,53 +67,56 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css">
 
-    <script type="module" crossorigin src="./assets/index-W6H1w8oT.js"></script>
-    <script type="module" crossorigin src="./assets/index-D3kMhra-.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Ct2Gw-6V.css">
+    <script type="module" crossorigin src="./assets/vue.esm-bundler-DWcbULsi.js"></script>
+    <script type="module" crossorigin src="./assets/index-BTLO3Cfb.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/vue-DfLgTgHH.css">
   </head>
   <body>
-    <div id="app" class="content -en">
-      <h1><i class="fa fa-trophy" aria-hidden="true"></i>Win Rate Calculator</h1>
-      <p>Enter your desired win rate,<br> and it will tell you how many<br> consecutive wins you need.</p>
-      <div class="card">
-        <div class="form-group">
-          <label for="all">Total Games:</label>
-          <input id="all" type="number" v-model="all">
-        </div>
-        <div class="form-group">
-          <label for="win">Current Win Rate:</label>
-          <input id="win" type="number" v-model="win">%
-        </div>
-        <span>Current Wins: approximately {{ totalWinDisplay }} games
-        </span>
-        <hr>
-        <div class="form-group">
-          <label for="wish">Desired Win Rate:</label>
-          <input id="wish" type="number" v-model="wish">%
-        </div>
-        <span>Consecutive Wins Needed: {{ more }} games</span>
-      </div>
-      <div id="lan-content" class="lan-btn-group">
-          <input type="checkbox" id="lan-menu-toggle">
-          <div id="language-options" class="lan-menu">
-            <a href="/">繁體中文</a>
-            <a href="/cn">简体中文</a>
-            <a href="/jp">日本語</a>
-            <a href="/ko">한국어</a>
+    <div id="app">
+      <div class="content -en">
+        <h1><i class="fa fa-trophy" aria-hidden="true"></i>Win Rate Calculator</h1>
+        <p>Enter your desired win rate,<br> and it will tell you how many<br> consecutive wins you need.</p>
+        <div class="card">
+          <div class="form-group">
+            <label for="all">Total Games:</label>
+            <input id="all" type="number" v-model="all">
           </div>
-          <label for="lan-menu-toggle" id="current-language">English</label>
+          <div class="form-group">
+            <label for="win">Current Win Rate:</label>
+            <input id="win" type="number" v-model="win">%
+          </div>
+          <span>Current Wins: approximately {{ totalWinDisplay }} games
+          </span>
+          <hr>
+          <div class="form-group">
+            <label for="wish">Desired Win Rate:</label>
+            <input id="wish" type="number" v-model="wish">%
+          </div>
+          <span>Consecutive Wins Needed: {{ more }} games</span>
+        </div>
+        <div id="lan-content" class="lan-btn-group">
+            <input type="checkbox" id="lan-menu-toggle">
+            <div id="language-options" class="lan-menu">
+              <a href="/">繁體中文</a>
+              <a href="/cn">简体中文</a>
+              <a href="/jp">日本語</a>
+              <a href="/ko">한국어</a>
+            </div>
+            <label for="lan-menu-toggle" id="current-language">English</label>
+        </div>
       </div>
+      <blockquote>
+        <a href="https://im1010ioio.bobaboba.me" target="_blank" class="sc-1ykasxb-0 eDynhg">
+          <img height="100%" src="https://s3.ap-southeast-1.amazonaws.com/media.anyonelab.com/images/boba/boba-embed-icon.png" alt="boba-icon"/>
+          <div>Buy me a bubble tea!</div>
+        </a>
+      </blockquote>
+      <footer>
+        <a href="/terms-of-use">Terms</a> ・
+        <a href="/about">About Me</a><br>
+          ©{{year}} All Rights Reserved by <a href="https://bento.me/im1010ioio" target="_blank">Eva Chen</a>.
+      </footer>
     </div>
-    <blockquote>
-      <a href="https://im1010ioio.bobaboba.me" target="_blank" class="sc-1ykasxb-0 eDynhg">
-        <img height="100%" src="https://s3.ap-southeast-1.amazonaws.com/media.anyonelab.com/images/boba/boba-embed-icon.png" alt="boba-icon"/>
-        <div>Buy me a bubble tea!</div>
-      </a>
-    </blockquote>
-    <footer>
-      <a href="/terms-of-use">Terms</a> ・
-      <a href="/about">About Me</a>
-    </footer>
 
   </body>
 </html>

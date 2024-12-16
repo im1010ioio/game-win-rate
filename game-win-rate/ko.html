@@ -69,48 +69,51 @@
 
   </head>
   <body>
-    <div id="app" class="content">
-      <h1><i class="fa fa-trophy" aria-hidden="true"></i>승률 계산기</h1>
-      <p>원하는 승률을 입력하면,<br> 추가로 몇 연승이 필요한지 알려줍니다.</p>
-      <div class="card">
-        <div class="form-group">
-          <label for="all">총 경기 수:</label>
-          <input id="all" type="number" v-model="all">
-        </div>
-        <div class="form-group">
-          <label for="win">현재 승률:</label>
-          <input id="win" type="number" v-model="win">%
-        </div>
-        <span>현재 승리 횟수(약): {{ totalWinDisplay }} 경기
-        </span>
-        <hr>
-        <div class="form-group">
-          <label for="wish">원하는 승률:</label>
-          <input id="wish" type="number" v-model="wish">%
-        </div>
-        <span>추가로 연승해야 할 횟수: {{ more }} 경기</span>
-      </div>
-      <div id="lan-content" class="lan-btn-group">
-          <input type="checkbox" id="lan-menu-toggle">
-          <div id="language-options" class="lan-menu">
-            <a href="/en">English</a>
-            <a href="/">繁體中文</a>
-            <a href="/cn">简体中文</a>
-            <a href="/jp">日本語</a>
+    <div id="app">
+      <div class="content">
+        <h1><i class="fa fa-trophy" aria-hidden="true"></i>승률 계산기</h1>
+        <p>원하는 승률을 입력하면,<br> 추가로 몇 연승이 필요한지 알려줍니다.</p>
+        <div class="card">
+          <div class="form-group">
+            <label for="all">총 경기 수:</label>
+            <input id="all" type="number" v-model="all">
           </div>
-          <label for="lan-menu-toggle" id="current-language">한국어</label>
+          <div class="form-group">
+            <label for="win">현재 승률:</label>
+            <input id="win" type="number" v-model="win">%
+          </div>
+          <span>현재 승리 횟수(약): {{ totalWinDisplay }} 경기
+          </span>
+          <hr>
+          <div class="form-group">
+            <label for="wish">원하는 승률:</label>
+            <input id="wish" type="number" v-model="wish">%
+          </div>
+          <span>추가로 연승해야 할 횟수: {{ more }} 경기</span>
+        </div>
+        <div id="lan-content" class="lan-btn-group">
+            <input type="checkbox" id="lan-menu-toggle">
+            <div id="language-options" class="lan-menu">
+              <a href="/en">English</a>
+              <a href="/">繁體中文</a>
+              <a href="/cn">简体中文</a>
+              <a href="/jp">日本語</a>
+            </div>
+            <label for="lan-menu-toggle" id="current-language">한국어</label>
+        </div>
       </div>
+      <blockquote>
+        <a href="https://im1010ioio.bobaboba.me" target="_blank" class="sc-1ykasxb-0 eDynhg">
+          <img height="100%" src="https://s3.ap-southeast-1.amazonaws.com/media.anyonelab.com/images/boba/boba-embed-icon.png" alt="boba-icon"/>
+          <div>저에게 버블티 한 잔 사주세요!</div>
+        </a>
+      </blockquote>
+      <footer>
+        <a href="/terms-of-use">Terms</a> ・
+        <a href="/about">About Me</a><br>
+          ©{{year}} All Rights Reserved by <a href="https://bento.me/im1010ioio" target="_blank">Eva Chen</a>.
+        </footer>
     </div>
-    <blockquote>
-      <a href="https://im1010ioio.bobaboba.me" target="_blank" class="sc-1ykasxb-0 eDynhg">
-        <img height="100%" src="https://s3.ap-southeast-1.amazonaws.com/media.anyonelab.com/images/boba/boba-embed-icon.png" alt="boba-icon"/>
-        <div>저에게 버블티 한 잔 사주세요!</div>
-      </a>
-    </blockquote>
-    <footer>
-      <a href="/terms-of-use">Terms</a> ・
-      <a href="/about">About Me</a>
-    </footer>
 
     <script type="module" src="/src/js/index.js"></script>
   </body>

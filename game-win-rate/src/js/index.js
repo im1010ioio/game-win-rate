@@ -3,12 +3,12 @@ import { createApp, ref, computed } from 'vue';
 
 createApp({
   setup() {
-    // 定義響應式變數
+
     const all = ref("");
     const win = ref("");
     const wish = ref("");
+    const year = new Date().getFullYear();
 
-    // 計算屬性
     const winPercent = computed(() => win.value / 100);
     const wishPercent = computed(() => wish.value / 100);
     const totalWin = computed(() => all.value * winPercent.value);
@@ -20,11 +20,11 @@ createApp({
       return result > 0 ? result : 0;
     });
 
-    // 將變數與計算屬性返回給模板使用
     return {
       all,
       win,
       wish,
+      year,
       totalWinDisplay,
       more
     };

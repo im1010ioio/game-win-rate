@@ -99,6 +99,7 @@ hr {
 }
 
 .content{
+    position: relative;
     max-width: 380px;
     &.-en{
         font-size: .9rem;
@@ -164,10 +165,6 @@ blockquote {
 // Language Buttons
 #lan-menu-toggle{
     display: none;
-}
-
-#app{
-    position: relative;
 }
 
 .lan-btn-group {
@@ -278,5 +275,7 @@ footer{
     bottom: 0;
     text-align: center;
     padding: 1rem;
-    font-size: .85rem;
+    font-size: .8rem;
+    line-height: 2;
+    opacity: .8;
 }

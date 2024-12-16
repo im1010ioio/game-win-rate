@@ -69,47 +69,50 @@
 
   </head>
   <body>
-    <div id="app" class="content -jp">
-      <h1><i class="fa fa-trophy" aria-hidden="true"></i>勝率計算機</h1>
-      <p>希望する勝率を入力すると、<br>あと何連勝が必要かを教えてくれます。</p>
-      <div class="card">
-        <div class="form-group">
-          <label for="all">総試合数：</label>
-          <input id="all" type="number" v-model="all">
-        </div>
-        <div class="form-group">
-          <label for="win">現在の勝率：</label>
-          <input id="win" type="number" v-model="win">%
-        </div>
-        <span>現在の勝利数：約 {{ totalWinDisplay }} 試合</span>
-        <hr>
-        <div class="form-group">
-          <label for="wish">目標勝率：</label>
-          <input id="wish" type="number" v-model="wish">%
-        </div>
-        <span>必要な連勝数：{{ more }} 試合</span>
-      </div>
-      <div id="lan-content" class="lan-btn-group">
-          <input type="checkbox" id="lan-menu-toggle">
-          <div id="language-options" class="lan-menu">
-            <a href="/en">English</a>
-            <a href="/">繁體中文</a>
-            <a href="/cn">简体中文</a>
-            <a href="/ko">한국어</a>
+    <div id="app">
+      <div class="content -jp">
+        <h1><i class="fa fa-trophy" aria-hidden="true"></i>勝率計算機</h1>
+        <p>希望する勝率を入力すると、<br>あと何連勝が必要かを教えてくれます。</p>
+        <div class="card">
+          <div class="form-group">
+            <label for="all">総試合数：</label>
+            <input id="all" type="number" v-model="all">
           </div>
-          <label for="lan-menu-toggle" id="current-language">日本語</label>
+          <div class="form-group">
+            <label for="win">現在の勝率：</label>
+            <input id="win" type="number" v-model="win">%
+          </div>
+          <span>現在の勝利数：約 {{ totalWinDisplay }} 試合</span>
+          <hr>
+          <div class="form-group">
+            <label for="wish">目標勝率：</label>
+            <input id="wish" type="number" v-model="wish">%
+          </div>
+          <span>必要な連勝数：{{ more }} 試合</span>
+        </div>
+        <div id="lan-content" class="lan-btn-group">
+            <input type="checkbox" id="lan-menu-toggle">
+            <div id="language-options" class="lan-menu">
+              <a href="/en">English</a>
+              <a href="/">繁體中文</a>
+              <a href="/cn">简体中文</a>
+              <a href="/ko">한국어</a>
+            </div>
+            <label for="lan-menu-toggle" id="current-language">日本語</label>
+        </div>
       </div>
+      <blockquote>
+        <a href="https://im1010ioio.bobaboba.me" target="_blank" class="sc-1ykasxb-0 eDynhg">
+          <img height="100%" src="https://s3.ap-southeast-1.amazonaws.com/media.anyonelab.com/images/boba/boba-embed-icon.png" alt="boba-icon"/>
+          <div>タピオカミルクティーを<br>おごってください！</div>
+        </a>
+      </blockquote>
+      <footer>
+        <a href="/terms-of-use">Terms</a> ・
+        <a href="/about">About Me</a><br>
+          ©{{year}} All Rights Reserved by <a href="https://bento.me/im1010ioio" target="_blank">Eva Chen</a>.
+      </footer>
     </div>
-    <blockquote>
-      <a href="https://im1010ioio.bobaboba.me" target="_blank" class="sc-1ykasxb-0 eDynhg">
-        <img height="100%" src="https://s3.ap-southeast-1.amazonaws.com/media.anyonelab.com/images/boba/boba-embed-icon.png" alt="boba-icon"/>
-        <div>タピオカミルクティーを<br>おごってください！</div>
-      </a>
-    </blockquote>
-    <footer>
-      <a href="/terms-of-use">Terms</a> ・
-      <a href="/about">About Me</a>
-    </footer>
 
     <script type="module" src="/src/js/index.js"></script>
   </body>
