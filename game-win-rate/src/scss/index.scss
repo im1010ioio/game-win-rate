@@ -44,23 +44,27 @@ $border-color: #9B8052;
 }
 
 html, body {
-    height: 100%;
-    color: $text-color;
+    min-height: 100dvh;
     @include vertical-gradient();
 }
 
+body, a, a:hover, a:focus, a:active{
+    color: $text-color;
+}
+
 body {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 800px;
     font-family: "Noto Sans", "Noto Sans TC", "Helvetica Neue", 
                  "Microsoft JHengHei UI", "Microsoft JHengHei", 
                  "微軟正黑體", sans-serif;
     text-shadow: 0px 0px 5px #BDA177;
     line-height: 1.5;
     letter-spacing: 1px;
+    padding: 6rem 0;
 }
 
 h1 {
@@ -69,9 +73,12 @@ h1 {
     margin: 0;
 }
 
+p, ol, ul{
+    margin-bottom: 2rem;
+}
+
 p {
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 input {
@@ -91,11 +98,30 @@ hr {
     border-color: $border-color;
 }
 
+.content{
+    max-width: 380px;
+    &.-en{
+        font-size: .9rem;
+        h1{
+            letter-spacing: 2px;
+            i{
+                margin-right: 12px;
+            }
+        }
+        .card label{
+            width: 140px;
+        }
+    }
+    &.-terms{
+        p{
+            text-align: left;
+        }
+    }
+}
 
 .card {
     padding: 30px;
     width: 100%;
-    max-width: 380px;
     border: 1px solid $border-color;
     @include box-shadow();
     @include horizontal-gradient();
@@ -134,18 +160,6 @@ blockquote {
     margin-top: 4rem;
 }
 
-.content.-en{
-    font-size: .9rem;
-    h1{
-        letter-spacing: 2px;
-        i{
-            margin-right: 12px;
-        }
-    }
-    .card label{
-        width: 140px;
-    }
-}
 
 // Language Buttons
 #lan-menu-toggle{
@@ -255,4 +269,14 @@ label[for="lan-menu-toggle"] {
         min-height: fit-content;
         max-height: fit-content;
     }
+}
+
+footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    padding: 1rem;
+    font-size: .85rem;
 }

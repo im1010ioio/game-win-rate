@@ -39,6 +39,8 @@ export default defineConfig({
         jp: fileURLToPath(new URL('./jp.html', import.meta.url)),
         cn: fileURLToPath(new URL('./cn.html', import.meta.url)),
         ko: fileURLToPath(new URL('./ko.html', import.meta.url)),
+        termsOfUse: fileURLToPath(new URL('./terms-of-use.html', import.meta.url)),
+        about: fileURLToPath(new URL('./about.html', import.meta.url)),
       },
     },
   },
@@ -56,6 +58,12 @@ export default defineConfig({
         }
         else if (req.url === '/ko/') {
           req.url = '/ko.html';
+        }
+        else if (req.url === '/terms-of-use/') {
+          req.url = '/terms-of-use.html';
+        }
+        else if (req.url === '/about/') {
+          req.url = '/about.html';
         }
         next();
       });
